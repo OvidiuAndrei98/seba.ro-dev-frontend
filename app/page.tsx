@@ -116,12 +116,7 @@ export default function Home() {
   // };
 
   useEffect(() => {
-    // console.log(addProd().then((r) => console.log(r)));
-    // getInv().then((r) => console.log(r));
-    // updateInv();
-    // deleteProd();
-    
-    shopifySubscribeToOrderPlacedService({
+     shopifySubscribeToOrderPlacedService({
       topic: "PRODUCTS_DELETE",
       webhookSubscription: {
         callbackUrl: "https://seba-ro-dev-frontend.vercel.app/webhooks",
@@ -129,6 +124,12 @@ export default function Home() {
         format: "JSON",
       },
     });
+    // console.log(addProd().then((r) => console.log(r)));
+    // getInv().then((r) => console.log(r));
+    // updateInv();
+    // deleteProd();
+    
+   
   }, []);
 
   return <></>;
