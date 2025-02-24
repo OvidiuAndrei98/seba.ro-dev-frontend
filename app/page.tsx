@@ -120,6 +120,7 @@ export default function Home() {
     // getInv().then((r) => console.log(r));
     // updateInv();
     // deleteProd();
+    
     shopifySubscribeToOrderPlacedService({
       topic: "PRODUCTS_DELETE",
       webhookSubscription: {
