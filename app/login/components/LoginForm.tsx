@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { LoginPageProps } from "@/lib/types";
 
 const formSchema = z.object({
   email: z.string().min(2, {
@@ -32,7 +33,7 @@ const LoginForm = (props: LoginPageProps) => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    props.onLogin(values.email, values.password);
+    props.params.onLogin(values.email, values.password);
   }
 
   return (

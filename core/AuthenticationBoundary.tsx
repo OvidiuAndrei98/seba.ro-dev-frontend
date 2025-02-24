@@ -191,7 +191,7 @@ export function AuthenticationBoundary(props: { children?: ReactNode }) {
     default:
       return "loading";
     case AuthenticationState.Unauthenticated:
-      return <LoginPage onLogin={login} loggingIn={isLoggingIn} />;
+      return <LoginPage params={{ onLogin: login, loggingIn: isLoggingIn }} />;
     case AuthenticationState.Authenticated:
       // For authenticated contexts, just render the children normally
       return (
