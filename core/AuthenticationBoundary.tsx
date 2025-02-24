@@ -1,9 +1,9 @@
 "use client";
 
 import React, { ReactNode, useContext, useEffect, useState } from "react";
-import LoginPage from "../app/login/page";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "@/lib/firebase/firebaseConfig";
+import LoginForm from "@/components/LoginForm";
 
 /**
  * Contains constants which describe the authentication state of the current session.
@@ -191,7 +191,7 @@ export function AuthenticationBoundary(props: { children?: ReactNode }) {
     default:
       return "loading";
     case AuthenticationState.Unauthenticated:
-      return <LoginPage params={{ onLogin: login, loggingIn: isLoggingIn }} />;
+      return <LoginForm onLogin={login} loggingIn={isLoggingIn} />;
     case AuthenticationState.Authenticated:
       // For authenticated contexts, just render the children normally
       return (
