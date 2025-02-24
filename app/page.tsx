@@ -123,7 +123,7 @@ export default function Home() {
     shopifySubscribeToOrderPlacedService({
       topic: "PRODUCTS_CREATE",
       webhookSubscription: {
-        callbackUrl: "/webhooks",
+        callbackUrl: "https://seba-ro-dev-frontend.vercel.app/webhooks",
         filter: "type:lookbook",
         format: "JSON",
       },
