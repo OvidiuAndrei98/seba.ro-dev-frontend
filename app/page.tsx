@@ -116,20 +116,18 @@ export default function Home() {
   // };
 
   useEffect(() => {
-     shopifySubscribeToOrderPlacedService({
-      topic: "PRODUCTS_DELETE",
-      webhookSubscription: {
-        callbackUrl: "https://seba-ro-dev-frontend.vercel.app/webhooks",
-        filter: "type:lookbook",
-        format: "JSON",
-      },
-    });
     // console.log(addProd().then((r) => console.log(r)));
     // getInv().then((r) => console.log(r));
     // updateInv();
     // deleteProd();
-    
-   
+    shopifySubscribeToOrderPlacedService({
+      topic: "PRODUCTS_DELETE",
+      webhookSubscription: {
+        callbackUrl: "/webhooks",
+        filter: "type:lookbook",
+        format: "JSON",
+      },
+    });
   }, []);
 
   return <></>;

@@ -46,7 +46,7 @@ export interface ProductDeleteInput {
 }
 
 export interface WebhookSubscriptionTopic {
-  topic: "PRODUCTS_DELETE";
+  topic: string;
   webhookSubscription: {
     callbackUrl: string;
     format: "JSON";
