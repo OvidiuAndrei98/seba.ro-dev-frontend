@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 /**
  * Properties for the login component.
  */
-interface LoginProps {
+interface LoginPageProps {
   /**
    * Invoked when the sign in button is pressed. Must start the authentication
    * flow.
@@ -40,7 +40,7 @@ const formSchema = z.object({
   }),
 });
 
-const LoginPage = (props: LoginProps) => {
+const LoginPage = (props: LoginPageProps) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -90,6 +90,6 @@ const LoginPage = (props: LoginProps) => {
       </form>
     </Form>
   );
-}
+};
 
-export default LoginPage
+export default LoginPage;
