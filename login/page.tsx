@@ -40,11 +40,7 @@ const formSchema = z.object({
   }),
 });
 
-/**
- * A component that renders a login screen with a single "sign in with SSO" button.
- * @param props         Component props.
- */
-const LoginPage = (props: LoginProps) => {
+export function LoginPage(props: LoginProps) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -95,5 +91,3 @@ const LoginPage = (props: LoginProps) => {
     </Form>
   );
 }
-
-export default LoginPage
