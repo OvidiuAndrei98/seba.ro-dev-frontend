@@ -121,7 +121,7 @@ export default function Home() {
     // updateInv();
     // deleteProd();
     shopifySubscribeToOrderPlacedService({
-      topic: "PRODUCTS_CREATE",
+      topic: "PRODUCTS_DELETE",
       webhookSubscription: {
         callbackUrl: "https://seba-ro-dev-frontend.vercel.app/webhooks",
         filter: "type:lookbook",
