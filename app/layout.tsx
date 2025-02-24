@@ -1,15 +1,15 @@
 "use client";
 import "./globals.css";
-import { AuthenticationBoundary } from "../core/AuthenticationBoundary";
+// import { AuthenticationBoundary } from "../core/AuthenticationBoundary";
 import { firebaseAuth } from "@/lib/firebase/firebaseConfig";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const authedUser = firebaseAuth.currentUser;
+  // const authedUser = firebaseAuth.currentUser;
   // const [userName, setUserName] = useState(authedUser?.email);
 
   // useEffect(() => {

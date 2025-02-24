@@ -1,7 +1,7 @@
 "use client";
 
 // import "./Signup.css";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -16,11 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { initializeApp } from "firebase/app";
-import {
-  firebaseAuth,
-  firebaseConfig,
-} from "../../lib/firebase/firebaseConfig";
+import { firebaseAuth } from "../../lib/firebase/firebaseConfig";
 import db from "../../lib/firebase/firesStore";
 import { setDoc, doc } from "firebase/firestore";
 
@@ -33,8 +29,7 @@ const formSchema = z.object({
   }),
 });
 
-const Signup = () => {
-  initializeApp(firebaseConfig);
+const SignupPage = () => {
   const auth = firebaseAuth;
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -106,4 +101,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupPage;
