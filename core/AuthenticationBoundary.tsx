@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode, useContext, useEffect, useState } from "react";
-import { LoginPage } from "../app/login/page";
+import LoginPage from "../app/login/page";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "@/lib/firebase/firebaseConfig";
 
