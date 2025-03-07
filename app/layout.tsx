@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="header-container">
-          <span className="logo">SERBA.RO</span>
+          <span className="logo">SebaA.ro</span>
           <span className="authed-user">{userName}</span>
         </div>
         <AuthenticationBoundary>
