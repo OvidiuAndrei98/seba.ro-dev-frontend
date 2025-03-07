@@ -61,7 +61,7 @@ const LoginForm = (props: LoginPageProps) => {
         <div className={cn("flex flex-col gap-6")}>
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl">Logare</CardTitle>
+              <CardTitle className="text-2xl">Conectare</CardTitle>
               <CardDescription>
                 Introduceti adresa de email si parola pentru a va loga
               </CardDescription>
