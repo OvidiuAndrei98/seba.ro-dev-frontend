@@ -219,7 +219,7 @@ const DrawerForm = ({
           )}
         />
         <Button className="w-full" type="submit">
-          Submit
+          Adauga
         </Button>
       </form>
     </Form>
