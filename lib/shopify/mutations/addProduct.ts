@@ -3,6 +3,15 @@ export function addProduct() {
         productSet(synchronous: $synchronous, input: $productSet) {
           product {
             id
+             variants(first: 1) {
+  edges {
+    node {
+      inventoryItem {
+        id
+      }
+    }
+  }
+}
           }
           productSetOperation {
             id

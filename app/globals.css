@@ -114,9 +114,14 @@
   }
 }
 
+body {
+  background-color: hsl(0deg 0% 89.91%);
+}
+
 .header-container {
   display: flex;
-  position: sticky;
+  position: relative;
+  background-color: white;
   top: 0;
   align-items: center;
   justify-content: space-between;
@@ -124,5 +129,33 @@
   box-shadow: 0px 1px 5px #b8b8b898;
   .logo {
     font-size: 32px;
+  }
+}
+
+.main-container {
+  max-width: 1200px;
+  background-color: hsl(0deg 0% 89.91%);
+  height: calc(100vh - 72px);
+  width: 100%;
+  margin: 0 auto;
+  .actions-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 40px;
+  }
+
+  .products-container {
+    width: 100%;
+    height: calc(100% - 72px);
+    padding: 0 12px;
+  }
+
+  .products {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    padding: 8px;
   }
 }

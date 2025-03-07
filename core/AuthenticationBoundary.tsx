@@ -3,7 +3,7 @@
 import React, { ReactNode, useContext, useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "@/lib/firebase/firebaseConfig";
-import LoginForm from "@/components/LoginForm";
+import LoginForm from "@/components/login-form";
 
 /**
  * Contains constants which describe the authentication state of the current session.
@@ -125,6 +125,7 @@ export function AuthenticationBoundary(props: { children?: ReactNode }) {
       } else {
         // Otherwise assume not authenticated
         setAuthenticationState(AuthenticationState.Unauthenticated);
+        firebaseAuth.signOut();
       }
     } catch (e) {
       // Assume the token is not set if an error occurs while reading
@@ -153,6 +154,7 @@ export function AuthenticationBoundary(props: { children?: ReactNode }) {
         } else {
           // Otherwise require users to log in again
           setAuthenticationState(AuthenticationState.Unauthenticated);
+          firebaseAuth.signOut();
         }
       }
     }
@@ -174,14 +176,14 @@ export function AuthenticationBoundary(props: { children?: ReactNode }) {
             setToken(r);
             setLoggingIn(false);
           });
-          // ...
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
+          // const errorCode = error.code;
+          // const errorMessage = error.message;
+          console.log(error);
           setLoggingIn(false);
         });
-    } catch (e) {
+    } catch {
       setLoggingIn(false);
     }
   }

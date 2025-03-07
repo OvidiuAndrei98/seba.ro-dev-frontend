@@ -21,7 +21,13 @@ export interface CreateProductSet {
       inventoryPolicy: "DENY";
       inventoryItem: {
         tracked: boolean;
+        sku: string;
       };
+      inventoryQuantities: {
+        locationId: string;
+        quantity: number;
+        name: "available";
+      }[];
     }[];
   };
 }

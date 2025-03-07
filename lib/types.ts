@@ -7,4 +7,5 @@ export interface Product {
   title: string;
   stock: number;
   productId: string;
+  inventoryItemId: string;
 }
